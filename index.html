@@ -4,8 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Hello World</h1>
+	<canvas id="clock"></canvas>
+	<div id="digital-clock-container">
+		<h1 id="digital-clock">
+			<span id="hour">00:</span><span id="min">00:</span><span id="sec">00</span><span id="suffix">AM</span>
+		</h1>
+	</div>
+	<div id="display">
+		<div id="profile-container">
+			<div id="profile-img-container">
+				<img id="profile-img" src="me.jpg">
+			</div>
+		</div>
+		<div id="welcome-container">
+			<h1><i>Welcome</i></h1>
+			<p>Hi, my name is Easton and this is my personal website. Take a look around.</p>
+		</div>
+		<!-- <div id="menu-container">
+			<a class="menu-link" href="about.html">About</a>
+			<a class="menu-link" href="projects.html">Projects</a>
+			<a class="menu-link" href="contact.html">Contact</a>
+		</div> -->
+	</div>
+<script src="main.js"></script>
+<script src="bar.js"></script>
 </body>
 </html>
