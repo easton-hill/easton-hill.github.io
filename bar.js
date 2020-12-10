@@ -10,16 +10,17 @@ class Bar {
     show() {
         const canvas = document.getElementById('clock');
         const context = canvas.getContext('2d');
-        context.lineWidth = 4;
-        context.fillStyle = this.color;
 
         const docWidth = document.body.clientWidth;
         const docHeight = document.body.clientHeight;
-        const display = $('#digital-clock-container').width() + $('#suffix').width();
+        // const display = 300;
+        // const start = 650;
+
+        const display = $('#digital-clock-container').width();
         const left = $('#digital-clock-container').css("left");
         const start = display + parseInt(left.substring(0, left.length - 2));
 
-        // width on either side of display
+        // width on either side of display;
         const topWidth = docWidth - start - this.padding;
         const botWidth = docWidth - 2 * this.padding;
         const height = docHeight - 2 * this.padding;
@@ -27,7 +28,16 @@ class Bar {
         const increment = totalLength / this.inc;
         const length = this.value * increment;
 
-        // draw line
+
+        context.lineWidth = 4;
+        context.fillStyle = this.color;
+        
+        // context.clearRect(start, this.padding, topWidth, this.size);
+        // context.clearRect(docWidth - this.padding - this.size, this.padding, this.size, height);
+        // context.clearRect(docWidth - this.padding, docHeight - this.padding, -(botWidth), -this.size)
+        // context.clearRect(this.padding, docHeight - this.padding, this.size, -(height));
+        // context.clearRect(this.padding, this.padding, topWidth, this.size);
+
         if (length > topWidth + 2 * height + botWidth) {
             context.fillRect(start, this.padding, topWidth, this.size);
             context.fillRect(docWidth - this.padding - this.size, this.padding, this.size, height);

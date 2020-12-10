@@ -1,13 +1,16 @@
+table, th {
+    border-collapse:collapse;
+    line-height: 30px;
+}
+
 html {
     font-size: 100%;
     font-family: 'Noto Sans JP', sans-serif;
-    height: -webkit-fill-available;
 }
 
 body {
     margin: 0;
     height: 100vh;
-    height: -webkit-fill-available;
     background-color: #f8f8ff;
     color: #e27d60;
 }
@@ -24,29 +27,27 @@ body {
     height: 30px;
 }
 
-#digital-clock {
-    display: inline;
-    padding: 0 10px;
-    line-height: 30px;
-}
-
 #hour {
     color: #e27d60;
+    font-size: 2rem;
 }
 
 #min {
     color: #e8a87c;
+    font-size: 2rem;
 }
 
 #sec {
     color: #c38d9e;
+    font-size: 2rem;
 }
 
 #suffix {
     writing-mode: vertical-lr;
+    vertical-align: text-bottom;
     text-orientation: upright;
-    font-size: 1rem;
-    position: absolute;
+    font-size: .85rem;
+    margin-left: -8px;
 }
 
 #display {
