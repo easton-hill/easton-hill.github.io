@@ -48,6 +48,7 @@ table, th {
     font-size: .85rem;
     margin-left: -8px;
     text-orientation: upright;
+    -webkit-text-orientation: upright;
     writing-mode: vertical-lr;
     vertical-align: text-bottom;
 }
