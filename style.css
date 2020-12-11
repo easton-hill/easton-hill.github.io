@@ -15,6 +15,7 @@ body {
 table, th {
     border-collapse:collapse;
     line-height: 30px;
+    margin: 0 15px;
 }
 
 #clock {
@@ -117,6 +118,7 @@ nav {
     background-color: #c38d9e;
     display: flex;
     flex-flow: row nowrap;
+    font-size: 1.1rem;
     left: 0;
     position: fixed;
     top: 0;
