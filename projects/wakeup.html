@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wakeup</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+        <a class="nav-link" href="../projects.html">Projects</a>
+        <a class="nav-link" href="../contact.html">Contact</a>
+    </nav>
+    <main>
+        <h1>Wakeup</h1>
+        <p>
+            When I moved to Dallas, it didn't take me long to realize I needed to regularly check the traffic for my commute in the morning. Accidents, weather, and holidays all affected the amount of time it would take me to get to work on a given day. I started checking the route on the Apple Maps app each morning. This was a manual step, but I could check it on the way to the car, so not a huge deal. After a few weeks, I felt like the route it was giving me wasn't the most efficient. It had me take the highway which, during the morning rush hour, was stop-and-go all the way. Luckily, Google Maps has a feature that allows you to drag and drop custom waypoints on a route. So one night, I expiremented with this feature and found a route that I considered better. The only problem was that this was a custom route I created and was never one of the standard options. Well, that's what APIs are for!</p>
+        </p>
+        <p>
+            Google offers a <a href="https://developers.google.com/maps/documentation/directions/overview" target="_blank">Directions API</a> which allows custom route creation as described above. It also allowed me to avoid the toll road, which takes the same amount of time as the highway during rush hour, but you have to pay! After I got the directions working, I realized there's one other thing I check every morning: the weather. OpenWeatherMap provides <a href="https://openweathermap.org/api" target="_blank">several APIs</a> that are sufficient. So, this turned into a pretty useful automation effort that I could use every morning.
+        </p>
+        <p>
+            One interesting (depending on you're definition of interesting) note deals with running this every day. I thought I would just use the Windows Task Scheduler to run this every morning. Since this would run after having my laptop idle overnight, I needed to allow the task to use a wake timer. To my surprise, this option did not appear in the power settings. After researching, I found that my laptop uses the <a href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/modern-standby" target="_blank">Modern Standby</a> power model, which means the computer only wakes when there is action required (OS maintenance/user wake), AKA no wake timers! On one forum, I saw someone suggest using an electircal timer to supply power to the laptop at a ceratin time and simulate a wake timer. While I love the ingenuity, I am no electrictian. At that point, I had some expereince with AWS and I was familiar with Lambda functions, so I went with that route. I set my function up with an EventBridge trigger to run every day at 7 AM, and that was that.
+        </p>
+        <!-- <p>
+            Others using/Advantages of AWS
+        </p> -->
+    </main>
+</body>
+</html>

@@ -1,12 +1,38 @@
+let clockInterval;
 $(document).ready(() => {
     size();
     main();
-    setInterval(main, 1000);
+    clockInterval = setInterval(main, 1000);
 });
 
 $(window).resize(() => {
     size();
     main();
+});
+
+$("#clock-display-btn").click(() => {
+    if ($("#clock-display-btn").val() === "on") {
+        // $("#clock").hide();
+        $('#btn-container').css("top", "39px");
+        $("#clock-display-btn").val("off");
+        $("#clock-display-btn").text("Clock On");
+        $("table").hide();
+        clearInterval(clockInterval);
+        const hBar = new Bar(0, 10, 24, 24, "#e27d60");
+        const mBar = new Bar(12, 10, 60, 60, "#e8a87c");
+        const sBar = new Bar(24, 10, 60, 60, "#c38d9e");
+        hBar.show();
+        mBar.show();
+        sBar.show();
+    } else {
+        $("table").show();
+        size();
+        main();
+        clockInterval = setInterval(main, 1000);
+        // $("#clock").show();
+        $("#clock-display-btn").val("on");
+        $("#clock-display-btn").text("Clock Off");
+    }
 });
 
 function size() {
@@ -17,6 +43,8 @@ function size() {
     canvas.height = $(window).height();
     const displayWidth = $('#digital-clock-container').width();
     $('#digital-clock-container').css("left", `${width / 2 - displayWidth / 2}px`);
+    const btnWidth = $('#btn-container').width();
+    $('#btn-container').css("left", `${width / 2 - btnWidth / 2}px`);
 }
 
 function main() {
