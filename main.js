@@ -8,6 +8,14 @@ $(document).ready(() => {
 $(window).resize(() => {
     size();
     main();
+    if ($("#clock-display-btn").val() === "off") {
+        const hBar = new Bar(0, 10, 24, 24, "#e27d60");
+        const mBar = new Bar(12, 10, 60, 60, "#e8a87c");
+        const sBar = new Bar(24, 10, 60, 60, "#c38d9e");
+        hBar.show();
+        mBar.show();
+        sBar.show();
+    }
 });
 
 $("#clock-display-btn").click(() => {
