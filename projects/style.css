@@ -44,6 +44,7 @@ main {
 
 p > a {
     color: #9a6f7c;
+    cursor: pointer;
     text-decoration: none;
 }
 
