@@ -56,6 +56,16 @@ p > a:hover {
     background-color: #ddd;
 }
 
+.tableauPlaceholder {
+    margin: 20px auto;
+    border: 1px solid black;
+}
+
+.img-container {
+    margin: auto;
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     main {
         line-height: 1.75rem;

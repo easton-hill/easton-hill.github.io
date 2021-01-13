@@ -26,9 +26,15 @@
         <p>
             One interesting (depending on you're definition of interesting) note deals with running this every day. I thought I would just use the Windows Task Scheduler to run this every morning. Since this would run after having my laptop idle overnight, I needed to allow the task to use a wake timer. To my surprise, this option did not appear in the power settings. After researching, I found that my laptop uses the <a href="https://docs.microsoft.com/en-us/windows-hardware/design/device-experiences/modern-standby" target="_blank">Modern Standby</a> power model, which means the computer only wakes when there is action required (OS maintenance/user wake), AKA no wake timers! On one forum, I saw someone suggest using an electircal timer to supply power to the laptop at a ceratin time and simulate a wake timer. While I love the ingenuity, I am no electrictian. At that point, I had some expereince with AWS and I was familiar with Lambda functions, so I went with that route. I set my function up with an EventBridge trigger to run every day at 7 AM, and that was that.
         </p>
-        <!-- <p>
-            Others using/Advantages of AWS
-        </p> -->
+        <p>
+            It turned out to be a good move to utitlize AWS for this. After I had been using it, I showed it to a few family and friends, and they started using it too. I was able to use a DynamoDB table to store all users and their location/routes. I updated the lambda to scan the table and send emails. Now, since a significant amount of companies have shifted to work from home, I don't utilize this currently. In the future, I'd like to expolore more options and offer this to others again. Below is an example of the email body (I used the ONE time there was snow in Dallas).
+        </p>
+        <div class="img-container">
+            <img src="email.PNG" alt="Example of email body">
+        </div>
+        <p>
+            I liked to use emojis to make as an indicator of weather. For the commute, I used green/yellow/red fruits to convey how fast the commute was compared to the average.
+        </p>
     </main>
 </body>
 </html>
