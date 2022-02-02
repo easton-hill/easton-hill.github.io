@@ -1,11 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
-</head>
-<body>
-  <h1>Hello</h1>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Word</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+
+  </head>
+
+  <body>
+    <div id="gameboard">
+      <div id="row-1" class="row">
+        <div id="r1c1" class="tile"></div>
+        <div id="r1c2" class="tile"></div>
+        <div id="r1c3" class="tile"></div>
+        <div id="r1c4" class="tile"></div>
+        <div id="r1c5" class="tile"></div>
+      </div>
+      <div id="row-2" class="row">
+        <div id="r2c1" class="tile"></div>
+        <div id="r2c2" class="tile"></div>
+        <div id="r2c3" class="tile"></div>
+        <div id="r2c4" class="tile"></div>
+        <div id="r2c5" class="tile"></div>
+      </div>
+      <div id="row-3" class="row">
+        <div id="r3c1" class="tile"></div>
+        <div id="r3c2" class="tile"></div>
+        <div id="r3c3" class="tile"></div>
+        <div id="r3c4" class="tile"></div>
+        <div id="r3c5" class="tile"></div>
+      </div>
+      <div id="row-4" class="row">
+        <div id="r4c1" class="tile"></div>
+        <div id="r4c2" class="tile"></div>
+        <div id="r4c3" class="tile"></div>
+        <div id="r4c4" class="tile"></div>
+        <div id="r4c5" class="tile"></div>
+      </div>
+      <div id="row-5" class="row">
+        <div id="r5c1" class="tile"></div>
+        <div id="r5c2" class="tile"></div>
+        <div id="r5c3" class="tile"></div>
+        <div id="r5c4" class="tile"></div>
+        <div id="r5c5" class="tile"></div>
+      </div>
+      <div id="row-6" class="row">
+        <div id="r6c1" class="tile"></div>
+        <div id="r6c2" class="tile"></div>
+        <div id="r6c3" class="tile"></div>
+        <div id="r6c4" class="tile"></div>
+        <div id="r6c5" class="tile"></div>
+      </div>
+    </div>
+
+    <div id="keyboard">
+      <div id="keyboard-row-1">
+        <button id="Q" class="key">Q</button>
+        <button id="W" class="key">W</button>
+        <button id="E" class="key">E</button>
+        <button id="R" class="key">R</button>
+        <button id="T" class="key">T</button>
+        <button id="Y" class="key">Y</button>
+        <button id="U" class="key">U</button>
+        <button id="I" class="key">I</button>
+        <button id="O" class="key">O</button>
+        <button id="P" class="key">P</button>
+      </div>
+      <div id="keyboard-row-2">
+        <button id="A" class="key">A</button>
+        <button id="S" class="key">S</button>
+        <button id="D" class="key">D</button>
+        <button id="F" class="key">F</button>
+        <button id="G" class="key">G</button>
+        <button id="H" class="key">H</button>
+        <button id="J" class="key">J</button>
+        <button id="K" class="key">K</button>
+        <button id="L" class="key">L</button>
+      </div>
+      <div id="keyboard-row-1">
+        <button id="enter" class="key">ENTER</button>
+        <button id="Z" class="key">Z</button>
+        <button id="X" class="key">X</button>
+        <button id="C" class="key">C</button>
+        <button id="V" class="key">V</button>
+        <button id="B" class="key">B</button>
+        <button id="N" class="key">N</button>
+        <button id="M" class="key">M</button>
+        <button id="backspace" class="key">&#9003;</button>
+      </div>
+    </div>
+    <div id="winner-display">
+      <button id="close-winner-display">X</button>
+      <h1>You won, barely...barely but-</h1>
+      <img src="barely.jpg" width="200" height="200">
+    </div>
+  </body>
 </html>
