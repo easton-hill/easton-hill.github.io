@@ -1,4 +1,4 @@
-const WORD = "LOVEU";
+const WORD = "NURSE";
 const MAX_GUESS = 6;
 
 const guess = [];
