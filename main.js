@@ -108,3 +108,16 @@ const closeBtn = document.getElementById("close-winner-display");
 closeBtn.addEventListener("click", () => {
   document.getElementById("winner-display").style.visibility = "hidden";
 });
+
+const shareResults = () => {
+  if (navigator.share) {
+    navigator.share({
+      title: "Testing share",
+      text: "This is the text of the share",
+      url: "easton-hill.github.io",
+    });
+  }
+};
+
+const shareBtn = document.getElementById("share");
+shareBtn.addEventListener("click", shareResults);

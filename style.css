@@ -83,7 +83,19 @@ button {
   height: 400px;
   margin: auto;
   text-align: center;
-  visibility: hidden;
+  /* visibility: hidden; */
+}
+
+#share {
+  font-size: x-large;
+  display: block;
+  margin: 8px auto 0;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #ddd;
+  cursor: pointer;
 }
 
 #close-winner-display {
