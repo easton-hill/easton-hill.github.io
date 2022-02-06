@@ -112,7 +112,7 @@ closeBtn.addEventListener("click", () => {
 const shareResults = () => {
   if (navigator.share) {
     navigator.share({
-      text: `${guessNum}/6`,
+      text: `Word\n\n${guessNum}/6`,
     });
   }
 };

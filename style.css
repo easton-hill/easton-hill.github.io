@@ -83,7 +83,7 @@ button {
   height: 400px;
   margin: auto;
   text-align: center;
-  /* visibility: hidden; */
+  visibility: hidden;
 }
 
 #share {
