@@ -6,6 +6,7 @@ body {
 
 button {
   color: #222;
+  touch-action: manipulation;
 }
 
 #gameboard, #keyboard {
