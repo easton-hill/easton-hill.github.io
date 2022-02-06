@@ -112,9 +112,7 @@ closeBtn.addEventListener("click", () => {
 const shareResults = () => {
   if (navigator.share) {
     navigator.share({
-      title: "Testing share",
-      text: "This is the text of the share",
-      url: "easton-hill.github.io",
+      text: `${guessNum}/6`,
     });
   }
 };
