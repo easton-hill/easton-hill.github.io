@@ -27,10 +27,7 @@ const analyzeMisplacedLetter = (index) => {
     }
   }
 
-  if (
-    wordOccurrences - correctLetters &&
-    wordOccurrences - misplacedBefore > 0
-  ) {
+  if (wordOccurrences - correctLetters - misplacedBefore > 0) {
     document
       .getElementById(`r${guessNum}c${index + 1}`)
       .classList.add("misplaced");
