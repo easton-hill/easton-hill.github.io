@@ -89,7 +89,7 @@ button {
 #share {
   font-size: x-large;
   display: block;
-  margin: 8px auto 0;
+  margin: 8px auto 0 auto;
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
