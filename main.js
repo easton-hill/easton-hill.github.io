@@ -1,17 +1,30 @@
-const WORD = "CULLS";
+const WORD_LIST = ["CULLS", "PROSE", "BOORS"];
 const MAX_GUESS = 6;
 
 const guess = [];
 let guessNum = 1;
-
 let gameOver = false;
+
+const getWord = () => {
+  const baseline = new Date();
+  baseline.setFullYear(2022, 1, 7);
+  baseline.setHours(0, 0, 0, 0);
+
+  const today = new Date();
+  const milliseconds = today - baseline;
+  const days = Math.floor(milliseconds / 24 / 60 / 60 / 1000);
+
+  if (days < WORD_LIST.length) {
+    return WORD_LIST[days];
+  }
+};
 
 const analyzeMisplacedLetter = (index) => {
   const letter = guess[index];
 
   let wordOccurrences = 0;
-  for (let i = 0; i < WORD.length; i++) {
-    if (WORD[i] === letter) {
+  for (let i = 0; i < word.length; i++) {
+    if (word[i] === letter) {
       wordOccurrences++;
     }
   }
@@ -19,9 +32,9 @@ const analyzeMisplacedLetter = (index) => {
   let [correctLetters, misplacedBefore] = [0, 0];
   for (let i = 0; i < guess.length; i++) {
     if (guess[i] === letter) {
-      if (guess[i] === WORD[i]) {
+      if (guess[i] === word[i]) {
         correctLetters++;
-      } else if (i < index && WORD.includes(guess[i])) {
+      } else if (i < index && word.includes(guess[i])) {
         misplacedBefore++;
       }
     }
@@ -40,11 +53,11 @@ const tryGuess = () => {
   const correctLetters = [];
   let correct = true;
   for (let i = 0; i < guess.length; i++) {
-    if (guess[i] === WORD[i]) {
+    if (guess[i] === word[i]) {
       document.getElementById(`r${guessNum}c${i + 1}`).classList.add("correct");
       document.getElementById(guess[i]).classList.add("correct");
       correctLetters.push(guess[i]);
-    } else if (WORD.includes(guess[i])) {
+    } else if (word.includes(guess[i])) {
       correct = false;
       analyzeMisplacedLetter(i);
       if (!correctLetters.includes(guess[i])) {
@@ -97,6 +110,8 @@ const keyPress = (e) => {
       }
   }
 };
+
+const word = getWord() || "ERROR";
 
 const buttons = document.getElementsByClassName("key");
 Array.from(buttons).forEach((btn) => btn.addEventListener("click", keyPress));
