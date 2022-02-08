@@ -73,14 +73,14 @@ button {
   background-color: #222;
 }
 
-#winner-display {
+#game-over-display {
   font-size: large;
   background-color: powderblue;
   border-radius: 5px;
   position: relative;
   top: -500px;
   width: 350px;
-  height: 400px;
+  height: 475px;
   margin: auto;
   text-align: center;
   visibility: hidden;
@@ -89,7 +89,7 @@ button {
 #share {
   font-size: x-large;
   display: block;
-  margin: 8px auto 0 auto;
+  margin: 12px auto 0 auto;
   padding: 6px 10px;
   border: none;
   border-radius: 5px;
@@ -98,7 +98,7 @@ button {
   cursor: pointer;
 }
 
-#close-winner-display {
+#close-game-over-display {
   position: absolute;
   border: none;
   border-radius: 2px;
@@ -108,6 +108,6 @@ button {
   font-size: x-large;
 }
 
-#winner-display > h1 {
-  padding-top: 25px;
+#game-over-header {
+  padding-top: 30px;
 }

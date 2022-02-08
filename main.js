@@ -1,4 +1,4 @@
-const WORD_LIST = ["CULLS", "PROSE", "BOORS"];
+const WORD_LIST = ["CULLS", "PROSE", "BOORS", "VOCAB"];
 const MAX_GUESS = 6;
 
 const guess = [];
@@ -74,12 +74,21 @@ const tryGuess = () => {
 
   if (correct) {
     gameOver = true;
-    document.getElementById("winner-display").style.visibility = "visible";
+    document.getElementById("game-over-header").innerText =
+      "You won, barely...barely but-";
+    document.getElementById("game-over-img").src = "barely.jpg";
+    document.getElementById("game-over-display").style.visibility = "visible";
   } else {
     guess.length = 0;
     guessNum++;
     if (guessNum > MAX_GUESS) {
       gameOver = true;
+      guessNum = "X";
+      document.getElementById(
+        "game-over-header"
+      ).innerText = `Word is: ${word}... Don't lose confidence`;
+      document.getElementById("game-over-img").src = "confidence.jpg";
+      document.getElementById("game-over-display").style.visibility = "visible";
     }
   }
 };
@@ -116,9 +125,9 @@ const word = getWord() || "ERROR";
 const buttons = document.getElementsByClassName("key");
 Array.from(buttons).forEach((btn) => btn.addEventListener("click", keyPress));
 
-const closeBtn = document.getElementById("close-winner-display");
+const closeBtn = document.getElementById("close-game-over-display");
 closeBtn.addEventListener("click", () => {
-  document.getElementById("winner-display").style.visibility = "hidden";
+  document.getElementById("game-over-display").style.visibility = "hidden";
 });
 
 const shareResults = () => {
