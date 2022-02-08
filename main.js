@@ -1,4 +1,4 @@
-const WORD_LIST = ["CULLS", "PROSE", "BOORS", "VOCAB"];
+const WORD_LIST = ["CULLS", "PROSE", "BOORS", "VOCAB", "ANTES", "SEIZE"];
 const MAX_GUESS = 6;
 
 const guess = [];
