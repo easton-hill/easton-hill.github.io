@@ -85,9 +85,19 @@ const tryGuess = () => {
 
   if (correct) {
     gameOver = true;
-    document.getElementById("game-over-header").innerText =
-      "You won, barely...barely but-";
-    document.getElementById("game-over-img").src = "barely.jpg";
+    if (guessNum < 3) {
+      document.getElementById("game-over-header").innerText =
+        "You are very BRILLIANT to me!!";
+      document.getElementById("game-over-img").src = "brilliant.jpg";
+    } else if (guessNum < 5) {
+      document.getElementById("game-over-header").innerText =
+        "Ohmygod...you on xgames mode";
+      document.getElementById("game-over-img").src = "xgames.jpg";
+    } else {
+      document.getElementById("game-over-header").innerText =
+        "You won, barely...barely but-";
+      document.getElementById("game-over-img").src = "barely.jpg";
+    }
     document.getElementById("game-over-display").style.visibility = "visible";
   } else {
     guess.length = 0;
