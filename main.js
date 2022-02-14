@@ -7,7 +7,11 @@ const WORD_LIST = [
   "TRAIT",
   "ANTES",
   "PRONG",
-  "TEMPO",
+  "PUNTY",
+  "FJORD",
+  "MYTHS",
+  "KAYAK",
+  "VODKA",
   "PRISM",
 ];
 const MAX_GUESS = 6;
