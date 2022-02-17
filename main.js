@@ -10,9 +10,12 @@ const WORD_LIST = [
   "PUNTY",
   "FJORD",
   "MYTHS",
+  "VEXED",
+  "TIGHT",
   "KAYAK",
-  "VODKA",
+  "WILLS",
   "PRISM",
+  "VODKA",
 ];
 const MAX_GUESS = 6;
 
