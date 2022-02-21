@@ -15,7 +15,12 @@ const WORD_LIST = [
   "WILLS",
   "STYLE",
   "CACHE",
-  "PRISM",
+  "PARGE",
+  "MELEE",
+  "KHAKI",
+  "ABYSS",
+  "GNARL",
+  "PSALM",
 ];
 const MAX_GUESS = 6;
 
