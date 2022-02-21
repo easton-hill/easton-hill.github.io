@@ -13,6 +13,8 @@ const WORD_LIST = [
   "KAYAK",
   "TIGHT",
   "WILLS",
+  "STYLE",
+  "CACHE",
   "PRISM",
 ];
 const MAX_GUESS = 6;
