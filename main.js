@@ -20,6 +20,13 @@ const WORD_LIST = [
   "KHAKI",
   "ABYSS",
   "GNARL",
+  "WRYLY",
+  "FLOUT",
+  "AFFIX",
+  "CAROM",
+  "HAIKU",
+  "FUZZY",
+  "KAZOO",
   "PSALM",
 ];
 const MAX_GUESS = 6;
