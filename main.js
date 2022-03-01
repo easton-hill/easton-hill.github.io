@@ -21,6 +21,7 @@ const WORD_LIST = [
   "ABYSS",
   "GNARL",
   "WRYLY",
+  "LITHE",
   "FLOUT",
   "AFFIX",
   "CAROM",
