@@ -24,7 +24,6 @@ const WORD_LIST = [
   "LITHE",
   "FLOUT",
   "AFFIX",
-  "CAROM",
   "HAIKU",
   "FUZZY",
   "KAZOO",
