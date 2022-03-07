@@ -29,6 +29,8 @@ const WORD_LIST = [
   "KAZOO",
   "PSALM",
   "APHID",
+  "HOVEL",
+  "SERIF",
   "WRING",
 ];
 const MAX_GUESS = 6;
