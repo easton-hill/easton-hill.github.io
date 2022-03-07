@@ -28,6 +28,8 @@ const WORD_LIST = [
   "FUZZY",
   "KAZOO",
   "PSALM",
+  "APHID",
+  "WRING",
 ];
 const MAX_GUESS = 6;
 
