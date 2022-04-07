@@ -1,37 +1,13 @@
 const WORD_LIST = [
-  "CULLS",
-  "PROSE",
-  "BOORS",
-  "VOCAB",
-  "QUEUE",
-  "TRAIT",
-  "ANTES",
-  "PRONG",
-  "PUNTY",
-  "FJORD",
-  "MYTHS",
-  "KAYAK",
-  "TIGHT",
-  "WILLS",
-  "STYLE",
-  "CACHE",
-  "PARGE",
-  "MELEE",
-  "KHAKI",
-  "ABYSS",
-  "GNARL",
-  "WRYLY",
-  "LITHE",
-  "FLOUT",
-  "AFFIX",
-  "HAIKU",
-  "FUZZY",
-  "KAZOO",
-  "PSALM",
-  "APHID",
-  "HOVEL",
-  "SERIF",
-  "WRING",
+  "ANIME",
+  "RADII",
+  "NADIR",
+  "ENNUI",
+  "SCION",
+  "TRITE",
+  "ZESTY",
+  "EBBED",
+  "THRUM",
 ];
 const MAX_GUESS = 6;
 
@@ -41,7 +17,7 @@ let gameOver = false;
 
 const getWord = () => {
   const baseline = new Date();
-  baseline.setFullYear(2022, 1, 7);
+  baseline.setFullYear(2022, 3, 7);
   baseline.setHours(0, 0, 0, 0);
 
   const today = new Date();
