@@ -1,14 +1,4 @@
-const WORD_LIST = [
-  "ANIME",
-  "RADII",
-  "NADIR",
-  "ENNUI",
-  "SCION",
-  "TRITE",
-  "ZESTY",
-  "EBBED",
-  "THRUM",
-];
+const WORD_LIST = ["SNAFU", "ALIBI", "MAGMA", "BEZEL"];
 const MAX_GUESS = 6;
 
 const guess = [];
@@ -17,7 +7,7 @@ let gameOver = false;
 
 const getWord = () => {
   const baseline = new Date();
-  baseline.setFullYear(2022, 3, 7);
+  baseline.setFullYear(2022, 4, 18);
   baseline.setHours(0, 0, 0, 0);
 
   const today = new Date();
